@@ -15,6 +15,11 @@ func rectProps(length, width float64) (float64,float64) {
 }
 
 
+func  variable_func(a int,b ...int )  {
+	fmt.Println(b)
+}
+
+
 func main()  {
 	sum :=calculateBill(1,2)
 	fmt.Println(sum)	
@@ -22,5 +27,7 @@ func main()  {
 	fmt.Printf("Area %f Perimeter %f\n", area, perimeter) 
 	area1, _ := rectProps(10.8, 5.6)
 	fmt.Printf("Area %f\n ", area1)
+	variable_func(1,2)
+	variable_func(1,2,4,5,6,8,9)
 }
 
