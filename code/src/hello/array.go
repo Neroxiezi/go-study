@@ -29,7 +29,7 @@ func main() {
 	i := make([]int, 5, 5)
 	fmt.Println(i)
 	cars := []string{"Ferrari", "Honda", "Ford"}
-    fmt.Println("cars:", cars, "has old length", len(cars), "and capacity", cap(cars)) //capacity of cars is 3
-    cars = append(cars, "Toyota")
-    fmt.Println("cars:", cars, "has new length", len(cars), "and capacity", cap(cars))
+	fmt.Println("cars:", cars, "has old length", len(cars), "and capacity", cap(cars)) //capacity of cars is 3
+	cars = append(cars, "Toyota")
+	fmt.Println("cars:", cars, "has new length", len(cars), "and capacity", cap(cars))
 }
