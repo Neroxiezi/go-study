@@ -2,6 +2,7 @@ package main
 
 import "fmt"
 import "unsafe"
+
 func main()  {
 	a :=true
 	b := false
