@@ -3,8 +3,38 @@
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/src/github.com/Masterminds/glide" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/github.com/Masterminds/semver" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/github.com/akavel/rsrc" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/github.com/fatih/color" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/src/github.com/garyburd/redigo" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/github.com/gin" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/github.com/gin-contrib/sse" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/github.com/gin-gonic/gin" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/github.com/go-playground/locales" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/github.com/go-playground/universal-translator" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/github.com/go-playground/validator" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/src/github.com/go-redis/redis" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/src/github.com/go-sql-driver/mysql" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/github.com/golang/protobuf" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/github.com/jackmordaunt/icns" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/github.com/kennygrant/sanitize" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/github.com/leaanthony/mewn" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/github.com/leaanthony/slicer" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/github.com/leaanthony/spinner" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/github.com/leaanthony/synx" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/github.com/leaanthony/wincursor" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/github.com/leodido/go-urn" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/github.com/lxn/walk" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/github.com/lxn/win" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/github.com/mattn/go-isatty" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/github.com/mitchellh/go-homedir" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/github.com/nfnt/resize" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/github.com/pkg/browser" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/github.com/pkg/errors" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/github.com/ugorji/go" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/github.com/wailsapp/wails" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/golang.org/x/sys" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/gopkg.in/Knetic/govaluate.v3" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/gopkg.in/yaml.v3" vcs="Git" />
   </component>
 </project>
