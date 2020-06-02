@@ -9,6 +9,7 @@ import (
 func main() {
 	tmw := new(TabMainWindow)
 	if err := (MainWindow{
+        Icon:     "icon/logo.ico",
 		Title:      "淘宝客微博管理工具",
 		AssignTo:   &tmw.MainWindow,
 		Background: SolidColorBrush{Color: walk.RGB(22, 119, 179)},
@@ -20,6 +21,10 @@ func main() {
 						Text:        "微博账号管理",
 						OnTriggered: func() { tmw.NewWeiBo() },
 					},
+					Action{
+                    						Text:        "更新账号",
+                    						OnTriggered: func() { tmw.UpWeiBo() },
+                    },
 				},
 			},
 			Menu{
@@ -93,4 +98,9 @@ func (tmw *TabMainWindow)  CouponsList() {
 
 func (tmw *TabMainWindow) UpdateCoupons() {
 	tmw.wv.SetURL("file:///" + getCurrentDirectory() + "/tpl/load.html")
+}
+
+func (tmw *TabMainWindow)UpWeiBo() {
+    update_weibo_data()
+    tmw.NewWeiBo()
 }
