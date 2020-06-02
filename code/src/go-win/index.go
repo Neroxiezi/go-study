@@ -4,12 +4,13 @@ import (
 	"github.com/lxn/walk"
 	. "github.com/lxn/walk/declarative"
 	"log"
+	//"os"
 )
 
 func main() {
 	tmw := new(TabMainWindow)
 	if err := (MainWindow{
-        Icon:     "icon/logo.ico",
+		Icon:       "icon/logo.ico",
 		Title:      "淘宝客微博管理工具",
 		AssignTo:   &tmw.MainWindow,
 		Background: SolidColorBrush{Color: walk.RGB(22, 119, 179)},
@@ -22,16 +23,16 @@ func main() {
 						OnTriggered: func() { tmw.NewWeiBo() },
 					},
 					Action{
-                    						Text:        "更新账号",
-                    						OnTriggered: func() { tmw.UpWeiBo() },
-                    },
+						Text:        "更新账号",
+						OnTriggered: func() { tmw.UpWeiBo() },
+					},
 				},
 			},
 			Menu{
 				Text: "&优惠券",
 				Items: []MenuItem{
 					Action{
-						Text: "优惠券列表",
+						Text:        "优惠券列表",
 						OnTriggered: func() { tmw.CouponsList() },
 					},
 					Action{
@@ -89,18 +90,47 @@ func InitVehicleTypePage(tmw *TabMainWindow) {
 }
 
 func (tmw *TabMainWindow) NewWeiBo() {
-	tmw.wv.SetURL("file:///" + getCurrentDirectory() + "/tpl/weibo.html")
+	//login_status, err := check_login()
+	//if err != nil {
+	//	tmw.wv.SetURL("file:///" + getCurrentDirectory() + "/tpl/login.html")
+	//}
+	//if login_status != true {
+	//	tmw.wv.SetURL("file:///" + getCurrentDirectory() + "/tpl/login.html")
+	//} else {
+		tmw.wv.SetURL("file:///" + getCurrentDirectory() + "/tpl/weibo.html")
+	//}
+
 }
 
-func (tmw *TabMainWindow)  CouponsList() {
-    tmw.wv.SetURL("file:///" + getCurrentDirectory() + "/tpl/coupons.html")
+func (tmw *TabMainWindow) CouponsList() {
+    //login_status, err := check_login()
+	//if err != nil {
+	//	tmw.wv.SetURL("file:///" + getCurrentDirectory() + "/tpl/login.html")
+	//}
+	//if login_status != true {
+	//	tmw.wv.SetURL("file:///" + getCurrentDirectory() + "/tpl/login.html")
+	//} else {
+		tmw.wv.SetURL("file:///" + getCurrentDirectory() + "/tpl/coupons.html")
+	//}
 }
 
 func (tmw *TabMainWindow) UpdateCoupons() {
-	tmw.wv.SetURL("file:///" + getCurrentDirectory() + "/tpl/load.html")
+	tmw.CouponsList()
 }
 
-func (tmw *TabMainWindow)UpWeiBo() {
-    update_weibo_data()
-    tmw.NewWeiBo()
+func (tmw *TabMainWindow) UpWeiBo() {
+	update_weibo_data()
+	tmw.NewWeiBo()
 }
+
+//func check_login() (bool, error) {
+//	str, err := os.Getwd()
+//	if err != nil {
+//		log.Fatal(err)
+//	}
+//	status, err := PathExists(str + "/tokenLock")
+//	if err != nil {
+//		return status, err
+//	}
+//	return status, nil
+//}

@@ -2,6 +2,9 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/code/src/go-win/server/pf_send_messages" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/code/src/go-win/server/pf_send_weibo" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/code/src/go-win/server/pf_taobao_down" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/src/github.com/Masterminds/glide" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/src/github.com/Masterminds/semver" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/src/github.com/akavel/rsrc" vcs="Git" />
@@ -27,6 +30,7 @@
     <mapping directory="$PROJECT_DIR$/src/github.com/lxn/walk" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/src/github.com/lxn/win" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/src/github.com/mattn/go-isatty" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/github.com/mikemintang/go-curl" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/src/github.com/mitchellh/go-homedir" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/src/github.com/nfnt/resize" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/src/github.com/pkg/browser" vcs="Git" />

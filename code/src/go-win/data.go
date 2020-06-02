@@ -5,6 +5,7 @@ import (
 	"encoding/json"
 	"fmt"
 	_ "github.com/go-sql-driver/mysql"
+	//"github.com/mikemintang/go-curl"
 	"io/ioutil"
 	"log"
 	"os"
@@ -13,7 +14,7 @@ import (
 )
 
 const (
-	data_file_path     = "/cache/weibo"
+	data_file_path     = "/cache/"
 	dsn                = "root:root@tcp(127.0.0.1:3306)/golang"
 	weibo_tpl          = "/tpl/weibo.html"
 	init_tpl_file_path = "/tpl/init.tpl"
@@ -47,7 +48,7 @@ func getWeiBoData() (string, error) {
 	if err != nil {
 		return "", err
 	}
-	f, err := os.Open(str + data_file_path)
+	f, err := os.Open(str + data_file_path + "weibo")
 	if err != nil {
 		return "", err
 	}
@@ -117,7 +118,7 @@ func set_cache(mString string) (string, error) {
 	if err != nil {
 		return "", err
 	}
-	f, err := os.Create(str + data_file_path)
+	f, err := os.Create(str + data_file_path + "weibo")
 	if err != nil {
 		return "", err
 	}
@@ -136,27 +137,11 @@ type AccountInfo struct {
 }
 
 func update_weibo_data() {
-	str, err := os.Getwd()
+	data_string, err := getDataforDatabase()
 	if err != nil {
 		log.Fatal(err)
 	}
-	status, err := PathExists(str + data_file_path)
-	if err != nil {
-		log.Fatal(err)
-	}
-	if status == true {
-		data_string, err := getWeiBoData()
-		if err != nil {
-			log.Fatal(err)
-		}
-		set_html(data_string)
-	} else {
-		data_string, err := getDataforDatabase()
-		if err != nil {
-			log.Fatal(err)
-		}
-		set_html(data_string)
-	}
+	set_html(data_string)
 }
 
 func set_html(data_string string) {
