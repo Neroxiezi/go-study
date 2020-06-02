@@ -11,15 +11,15 @@ func main() {
 	tmw := new(TabMainWindow)
 	if err := (MainWindow{
 		Icon:       "icon/logo.ico",
-		Title:      "淘宝客微博管理工具",
+		Title:      "客户管理工具",
 		AssignTo:   &tmw.MainWindow,
 		Background: SolidColorBrush{Color: walk.RGB(22, 119, 179)},
 		MenuItems: []MenuItem{
 			Menu{
-				Text: "&微博",
+				Text: "&账号",
 				Items: []MenuItem{
 					Action{
-						Text:        "微博账号管理",
+						Text:        "账号管理",
 						OnTriggered: func() { tmw.NewWeiBo() },
 					},
 					Action{
@@ -29,14 +29,14 @@ func main() {
 				},
 			},
 			Menu{
-				Text: "&优惠券",
+				Text: "&任务",
 				Items: []MenuItem{
 					Action{
-						Text:        "优惠券列表",
+						Text:        "任务列表",
 						OnTriggered: func() { tmw.CouponsList() },
 					},
 					Action{
-						Text:        "更新优惠券",
+						Text:        "更新任务",
 						OnTriggered: func() { tmw.UpdateCoupons() },
 					},
 				},
