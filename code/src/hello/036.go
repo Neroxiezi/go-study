@@ -9,4 +9,9 @@ func main() {
 	// 整数和浮点数
 	fmt.Println("1+1 = ",1+1)
 	fmt.Println(true|| false )
+
+	// 布尔型  以及常见的布尔操作
+	fmt.Println(true || false)
+	fmt.Println(true && false)
+	fmt.Println(!true)
 }
