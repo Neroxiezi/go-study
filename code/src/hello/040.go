@@ -10,4 +10,21 @@ func main(){
 	s[0] = "a"
 	s[1] = "b"
 	s[2] = "c"
+	fmt.Println(s)
+	s = append(s,"d","e")
+	fmt.Println(s)
+	c :=make([]string,len(s))
+	copy(c,s)
+	fmt.Println(c)
+
+	l :=s[2:3]
+	fmt.Println(l)
+	l = s[:2]
+	fmt.Println(l)
+	l = s[2:]
+	fmt.Println(l)
+
+	t :=[]string{"g","h","i"}
+	fmt.Println(t)
+
 }
