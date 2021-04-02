@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"strings"
 	"os"
+	"bufio"
 )
 
 func ReadForm(reader io.Reader,num int) ([]byte,error){
@@ -52,4 +53,20 @@ func main() {
 		panic(err)
 	}
 	fmt.Println(n)
+
+	//读取
+	file, err = os.Open("writeAt.txt")
+	if err != nil {
+		panic(err)
+	}
+	defer file.Close()
+	writer := bufio.NewWriter(os.Stdout)
+	writer.ReadFrom(file)
+	writer.Flush()
+
+	//Seeker 接口
+	reader = strings.NewReader("cccccccccc")
+	reader.Seek(-6, io.SeekEnd)
+	r, _, _ := reader.ReadRune()
+	fmt.Printf("%c\n", r)
 }
