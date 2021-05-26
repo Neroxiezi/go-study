@@ -23,3 +23,4 @@ func main() {
 	str := make([]string,10)
 	fmt.Println(str)
 }
+ 
